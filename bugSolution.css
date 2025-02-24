@@ -1,0 +1,13 @@
+The solution involves ensuring consistent unit usage within the `calc()` function or employing a more predictable approach.  Instead of mixing percentages and pixels, either use a consistent unit (e.g., only pixels) or calculate the percentage beforehand, using `em` or `rem`  to maintain proper scaling. 
+
+Here's a corrected version:
+
+```css
+/* bugSolution.css */
+#myElement {
+  width: calc(50% - 20px);
+  /* Or, for better scaling and consistency*/
+  /*width: calc(50vw - 2em);*/ 
+}
+```
+This ensures the calculation is performed using consistent units, preventing unexpected results.
